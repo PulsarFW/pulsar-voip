@@ -20,7 +20,7 @@ VoIP integration layer for Pulsar Framework handling proximity voice, radio chan
 
 ## License
 
-Copyright © 2024 Pulsar Framework. All rights reserved.
+Copyright © 2026 Pulsar Framework. All rights reserved.
 
 <div align="center">
 
