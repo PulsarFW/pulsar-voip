@@ -17,10 +17,9 @@ jobs:
 
       - name: Bundle files
         run: |
-          mkdir -p ./temp/pulsar-voip
-          cp ./{README.md,fxmanifest.lua} ./temp/pulsar-voip
-          cp -r ./{client,server,shared} ./temp/pulsar-voip
-          cd ./temp && zip -r ../pulsar-voip.zip ./pulsar-voip
+          mkdir -p staging/pulsar-voip
+          rsync -a --exclude='.github' --exclude='node_modules' --exclude='staging' . staging/pulsar-voip/
+          cd staging && zip -r ../pulsar-voip.zip pulsar-voip/
 
       - name: Create release
         uses: softprops/action-gh-release@v2
